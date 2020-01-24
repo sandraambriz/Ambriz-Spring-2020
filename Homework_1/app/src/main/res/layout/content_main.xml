@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/textViewOne"
+        android:layout_width="186dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginRight="184dp"
+        android:text="Display Concatenation..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTwo"
+        android:layout_width="184dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginRight="184dp"
+        android:text="Display number addition..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOne" />
+
+    <EditText
+        android:id="@+id/editTextOne"
+        android:layout_width="296dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginLeft="106dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Add text or a number..."
+        app:layout_constraintBottom_toTopOf="@+id/editTextTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTwo" />
+
+    <EditText
+        android:id="@+id/editTextTwo"
+        android:layout_width="291dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginLeft="109dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="89dp"
+        android:layout_marginBottom="400dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Add text or a number..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOne" />
+
+    <Button
+        android:id="@+id/buttonOne"
+        android:layout_width="207dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginLeft="167dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginRight="156dp"
+        android:layout_marginBottom="35dp"
+        android:text="Concatenation"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTwo" />
+
+    <Button
+        android:id="@+id/buttonTwo"
+        android:layout_width="206dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginRight="153dp"
+        android:layout_marginBottom="184dp"
+        android:text="Number Addition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOne" />
+</androidx.constraintlayout.widget.ConstraintLayout>
