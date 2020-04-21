@@ -1,0 +1,30 @@
+{
+    "owner": {
+        "id": 1,
+        "name": "Favorite Products"
+    },
+    "product": [
+        {
+            "id": 1,
+            "name": "35G Bronze Goals",
+            "brand": "Morphe",
+            "type": "Eyeshadow"
+        },
+        {
+            "id":2,
+            "name": "The Jaclyn Hill Palette",
+            "brand": "Morphe",
+            "type": "Eyeshadow",
+            "details":{
+                "quote" : "This palette is dedicated to all my loving subscribers. xo Jaclyln",
+                "total_colors":35,
+                "product_link": "https://www.ulta.com/morphe-x-jaclyn-hill-palette-volume-ii?productId=pimprod2013297"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Socialite",
+            "type": "Eyeshadow Palette"
+        }
+    ]
+}
