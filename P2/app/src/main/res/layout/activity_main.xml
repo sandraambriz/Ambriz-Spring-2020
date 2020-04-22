@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- This is the first page displayed that allows a user to
+     click a button to register or login -->
+    <LinearLayout
+        android:id="@+id/registration_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/main_loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"/>
+
+        <Button
+            android:id="@+id/main_registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register" />
+    </LinearLayout>
+
+        <include
+            android:id="@+id/register_layout"
+            android:visibility="gone"
+            layout="@layout/user_registration"/>
+
+        <include
+            android:id="@+id/login_layout"
+            android:visibility="gone"
+            layout="@layout/user_login"/>
+
+</RelativeLayout>
