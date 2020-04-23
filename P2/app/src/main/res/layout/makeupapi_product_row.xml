@@ -2,8 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <!--This is a custom list for each product row from the makeup api -->
 
@@ -20,69 +21,68 @@
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/api_prouct_brand"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/api_featured_image"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginRight="13dp"
-        android:layout_marginBottom="588dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/api_product_name"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/api_prouct_brand"
         android:layout_width="63dp"
         android:layout_height="20dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="184dp"
-        android:layout_marginRight="184dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginRight="320dp"
         android:layout_marginBottom="2dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/api_product_desc"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/api_product_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/api_product_name"
         app:layout_constraintTop_toBottomOf="@+id/api_product_name" />
 
     <TextView
         android:id="@+id/api_product_desc"
         android:layout_width="174dp"
         android:layout_height="18dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
+        android:layout_marginEnd="220dp"
+        android:layout_marginRight="220dp"
         android:layout_marginBottom="1dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/api_product_type"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/api_prouct_brand"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/api_prouct_brand"
         app:layout_constraintTop_toBottomOf="@+id/api_prouct_brand" />
 
     <TextView
         android:id="@+id/api_product_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="187dp"
         android:layout_marginRight="187dp"
         android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toStartOf="@+id/api_product_desc"
         app:layout_constraintTop_toBottomOf="@+id/api_product_desc" />
+
+    <ImageView
+        android:id="@+id/api_featured_image"
+        android:layout_width="91dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginEnd="389dp"
+        android:layout_marginRight="389dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513"
+        app:srcCompat="@color/colorAccent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

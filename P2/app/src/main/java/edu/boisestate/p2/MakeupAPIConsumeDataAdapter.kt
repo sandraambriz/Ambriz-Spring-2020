@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.makeupapi_product_row.view.*
 
 /**
@@ -35,8 +36,8 @@ class ConsumeDataAdapter(val base:List<Base>): RecyclerView.Adapter<CustomViewHo
         holder?.itemView?.api_product_type?.text = product.product_type
 
         //holder.itemView.api_product_colors.text = product.product_colors.toString()
-        //val producImage = holder?.itemView?.api_featured_image
-        //Picasso.with(holder?.itemView?.context).load(product.api_featured_image).into(producImage)
+        val producImage = holder?.itemView?.api_featured_image
+        Picasso.with(holder?.itemView?.context).load(product.image_link).into(producImage)
 
     }
 

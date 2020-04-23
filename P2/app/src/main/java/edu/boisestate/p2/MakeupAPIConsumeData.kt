@@ -51,14 +51,14 @@ class MakeupAPIConsumeData : AppCompatActivity() {
             }
 
             /**
-             * If the connection is succesful,
+             * If the connection is successful,
              * then our body contents are added to an array.
              */
             override fun onResponse(call: Call, response: Response) {
                 val body = response?.body()?.string()
                 val gson = GsonBuilder().create()
                 val apiProducts = gson.fromJson(body, kotlin.Array<Base>::class.java).toList()
-
+                println(body)
                 //ensures that the recycler view displays
                 runOnUiThread {
                     recyclerview_ConsumeData.adapter = ConsumeDataAdapter(apiProducts)
