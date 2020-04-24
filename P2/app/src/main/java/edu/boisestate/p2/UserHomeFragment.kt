@@ -67,7 +67,16 @@ class UserHomeFragment : Fragment() {
         //If add product is clicked, then add that product to database
         v.homepage_addProductButton.setOnClickListener {
             val productName: String = v.homepage_addProductEditText.text.toString()
-            productHandler.addProduct(productName)
+            val productType: String = v.homepage_productTypeEditText.text.toString()
+            val productBrand: String = v.homepage_productTypeEditText.text.toString()
+            val locationOfPurchase: String = v.homepage_locationOfPurchaseEditExt.text.toString()
+            val storeName: String = v.homepage_storeNameEditText.text.toString()
+            val purchaseDate: String = v.homepage_purchaseDateEditText.text.toString()
+            val expirationDate: String = v.homepage_expirationDateEditText.text.toString()
+
+            productHandler.addProduct(productName, productType, productBrand, locationOfPurchase,
+                                        storeName, purchaseDate, expirationDate)
+
             Log.d("ADD PRODUCT", productHandler.getProducts().toString())
         }
 

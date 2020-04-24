@@ -13,6 +13,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="100dp"
+        android:height="40dp"
         android:text="View Product List"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,7 @@
     <Button
         android:id="@+id/homepage_addProductButton"
         android:layout_width="410dp"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="135dp"
@@ -49,11 +50,73 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="323dp"
         android:layout_marginRight="0dp"
+        android:height="40dp"
         android:hint="Product Name"
         app:layout_constraintBottom_toTopOf="@+id/homepage_viewUserProductsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/homepage_productBrandEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:height="40dp"
+        android:hint="Product Brand" />
+
+    <EditText
+        android:id="@+id/homepage_productTypeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:height="40dp"
+        android:hint="Product Type" />
+
+    <EditText
+        android:id="@+id/homepage_locationOfPurchaseEditExt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:height="40dp"
+        android:hint="Location of Purchase" />
+
+    <EditText
+        android:id="@+id/homepage_storeNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:height="40dp"
+        android:hint="Store Name" />
+
+    <EditText
+        android:id="@+id/homepage_purchaseDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:height="40dp"
+        android:hint="Purchase Date" />
+
+    <EditText
+        android:id="@+id/homepage_expirationDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:height="40dp"
+        android:hint="Expiration Date" />
+
+    <ListView
+        android:id="@+id/productlist_listview"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </FrameLayout>
