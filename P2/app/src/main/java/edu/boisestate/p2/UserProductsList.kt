@@ -20,22 +20,35 @@ class UserProductsList : AppCompatActivity() {
             when (item.itemId) {
                 R.id.home -> {
                     println("home clicked")
-                    //val homepageIntent = Intent(this, UserHomepage::class.java)
-                    //startActivity(homepageIntent)
+                    val homepageIntent = Intent(this, UserHomepage::class.java)
+                    startActivity(homepageIntent)
                     //TODO figure out why this breaks!
-                    val homeFragmentTransaction = supportFragmentManager.beginTransaction()
-                    homeFragmentTransaction.replace(R.id.fragmentContainer, UserHomeFragment())
-                    homeFragmentTransaction.commit()
+                    //val homeFragmentTransaction = supportFragmentManager.beginTransaction()
+                    //homeFragmentTransaction.replace(R.id.fragmentContainer, UserHomeFragment())
+                    //homeFragmentTransaction.commit()
                     return@OnNavigationItemSelectedListener true
                 }
                 //if api product list is clicked, then display the api list
-                R.id.products -> {
+                R.id.popularProducts -> {
                     println("products clicked")
                     val recyclerViewListIntent = Intent(this, MakeupAPIConsumeData::class.java)
                     startActivity(recyclerViewListIntent)
-                    val transaction = supportFragmentManager.beginTransaction()
-                    transaction.replace(R.id.fragmentContainer, MakeupAPIListFragment())
-                    transaction.commit()
+                    //val transaction = supportFragmentManager.beginTransaction()
+                    //transaction.replace(R.id.fragmentContainer, MakeupAPIListFragment())
+                    //transaction.commit()
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.recommendedProducts ->{
+                    println("recommended clicked")
+                    val recommendedProductIntent = Intent(this, RecommendedJSONConsumeData::class.java)
+                    startActivity(recommendedProductIntent)
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.logout ->{
+                    val mainPageIntent = Intent(this, MainActivity::class.java)
+                    startActivity(mainPageIntent)
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -48,7 +61,7 @@ class UserProductsList : AppCompatActivity() {
         setContentView(R.layout.activity_user_product_list)
 
         //Enables listening for navigation bar items
-        bottomNavigationBar.setOnNavigationItemSelectedListener(navItemSelectedListener)
+        userlist_bottomNavigationBar.setOnNavigationItemSelectedListener(navItemSelectedListener)
 
         productHandler = ProductDatabaseHelper(this)
         val productData = productHandler.getProducts()
@@ -72,7 +85,7 @@ class UserProductsList : AppCompatActivity() {
                 val edit = productlist_editProduct.text.toString()
                 adapter.remove(item)
                 adapter.insert(edit, position)
-                productHandler.updateProduct(item)
+                //productHandler.updateProduct(item)
                 Log.d("UPDATE()", productHandler.getProducts().toString())
             }
         }

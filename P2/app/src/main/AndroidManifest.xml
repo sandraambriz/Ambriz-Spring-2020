@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".RecommendedJSONConsumeData"></activity>
         <activity android:name=".MakeupAPIConsumeData" />
         <activity android:name=".UserProductsList" />
         <activity android:name=".UserHomepage" />

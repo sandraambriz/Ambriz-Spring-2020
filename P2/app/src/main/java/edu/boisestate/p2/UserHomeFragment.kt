@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import edu.boisestate.p2.R.id.fragmentContainer
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -23,6 +22,7 @@ class UserHomeFragment : Fragment() {
     //used to handle the bottom navigation bar clicks
     private val navItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
+
             //if home image on nav bar is clicked, then display home page
             //if home is clicked, take user to homepage intent
             when (item.itemId) {
@@ -33,13 +33,26 @@ class UserHomeFragment : Fragment() {
                     return@OnNavigationItemSelectedListener true
                 }
                 //if api product list is clicked, then display the api list
-                R.id.products -> {
+                R.id.popularProducts -> {
                     println("products clicked")
                     val recyclerViewListIntent = Intent(activity, MakeupAPIConsumeData::class.java)
                     startActivity(recyclerViewListIntent)
                     val transaction = fragmentManager!!.beginTransaction()
                     transaction.replace(fragmentContainer, MakeupAPIListFragment())
                     transaction.commit()
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.recommendedProducts ->{
+                    println("recommended clicked")
+                    val recommendedProductIntent = Intent(activity, RecommendedJSONConsumeData::class.java)
+                    startActivity(recommendedProductIntent)
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.logout ->{
+                    val mainPageIntent = Intent(activity, MainActivity::class.java)
+                    startActivity(mainPageIntent)
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -58,7 +71,7 @@ class UserHomeFragment : Fragment() {
 
         val v: View = inflater.inflate(R.layout.fragment_home, container, false)
         lateinit var productHandler:ProductDatabaseHelper
-        v.bottomNavigationBar.setOnNavigationItemSelectedListener(navItemSelectedListener)
+        v.userlist_bottomNavigationBar.setOnNavigationItemSelectedListener(navItemSelectedListener)
 
         //our product database handler
         productHandler = ProductDatabaseHelper(activity!!)
@@ -66,7 +79,7 @@ class UserHomeFragment : Fragment() {
 
         //If add product is clicked, then add that product to database
         v.homepage_addProductButton.setOnClickListener {
-            val productName: String = v.homepage_addProductEditText.text.toString()
+            val productName: String = v.homepage_productNameEditText.text.toString()
             val productType: String = v.homepage_productTypeEditText.text.toString()
             val productBrand: String = v.homepage_productTypeEditText.text.toString()
             val locationOfPurchase: String = v.homepage_locationOfPurchaseEditExt.text.toString()
@@ -74,8 +87,10 @@ class UserHomeFragment : Fragment() {
             val purchaseDate: String = v.homepage_purchaseDateEditText.text.toString()
             val expirationDate: String = v.homepage_expirationDateEditText.text.toString()
 
-            productHandler.addProduct(productName, productType, productBrand, locationOfPurchase,
-                                        storeName, purchaseDate, expirationDate)
+            val userProduct:UserProduct = UserProduct(productName,
+                productType, productBrand, locationOfPurchase, storeName, purchaseDate, expirationDate)
+
+            productHandler.addProduct(userProduct)
 
             Log.d("ADD PRODUCT", productHandler.getProducts().toString())
         }

@@ -3,13 +3,22 @@
 
     <item
         android:id="@+id/home"
-        android:title="Home"
-        android:textColor="#32a834"
-        android:icon="@drawable/home"/>
+        android:icon="@drawable/user_home_foreground"
+        android:iconTint="@color/colorPrimaryDark"
+        android:title="Home" />
 
     <item
-        android:id="@+id/products"
-        android:title="Products"
-        android:textColor="#32a834"
-        android:icon="@drawable/list"/>
+        android:id="@+id/popularProducts"
+        android:title="Popular"
+        android:icon="@drawable/api_popular_items_foreground" />
+
+    <item
+        android:id="@+id/recommendedProducts"
+        android:icon="@drawable/user_recommended_foreground"
+        android:title="Recommended" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/nav_logout_foreground"
+        android:title="Logout" />
 </menu>

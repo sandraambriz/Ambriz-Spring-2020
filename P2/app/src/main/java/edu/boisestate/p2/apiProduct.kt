@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * Data class for api product variables.
  */
+
 data class Base (
 
     @SerializedName("id") val id : Int,
