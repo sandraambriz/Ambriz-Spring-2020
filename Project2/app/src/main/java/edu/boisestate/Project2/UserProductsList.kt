@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_user_product_list.*
 class UserProductsList : AppCompatActivity() {
 
     lateinit var productHandler: ProductDatabaseHelper
+    lateinit var session:SessionManager
 
     //Used to handle the bottom navigation bar item clicks
     private val navItemSelectedListener =
@@ -22,10 +23,7 @@ class UserProductsList : AppCompatActivity() {
                     println("home clicked")
                     val homepageIntent = Intent(this, UserHomepage::class.java)
                     startActivity(homepageIntent)
-                    //TODO figure out why this breaks!
-                    //val homeFragmentTransaction = supportFragmentManager.beginTransaction()
-                    //homeFragmentTransaction.replace(R.id.fragmentContainer, UserHomeFragment())
-                    //homeFragmentTransaction.commit()
+                    finish()
                     return@OnNavigationItemSelectedListener true
                 }
                 //if api product list is clicked, then display the api list
@@ -33,9 +31,7 @@ class UserProductsList : AppCompatActivity() {
                     println("products clicked")
                     val recyclerViewListIntent = Intent(this, MakeupAPIConsumeData::class.java)
                     startActivity(recyclerViewListIntent)
-                    //val transaction = supportFragmentManager.beginTransaction()
-                    //transaction.replace(R.id.fragmentContainer, MakeupAPIListFragment())
-                    //transaction.commit()
+                    finish()
                     return@OnNavigationItemSelectedListener true
                 }
 
@@ -43,12 +39,14 @@ class UserProductsList : AppCompatActivity() {
                     println("recommended clicked")
                     val recommendedProductIntent = Intent(this, RecommendedJSONConsumeData::class.java)
                     startActivity(recommendedProductIntent)
+                    finish()
                     return@OnNavigationItemSelectedListener true
                 }
 
                 R.id.logout ->{
                     val mainPageIntent = Intent(this, MainActivity::class.java)
                     startActivity(mainPageIntent)
+                    finish()
                     return@OnNavigationItemSelectedListener true
                 }
             }
@@ -59,6 +57,7 @@ class UserProductsList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_product_list)
+
 
         //Enables listening for navigation bar items
         userlist_bottomNavigationBar.setOnNavigationItemSelectedListener(navItemSelectedListener)
@@ -80,13 +79,10 @@ class UserProductsList : AppCompatActivity() {
             }
 
             //if update button is clicked, then update that item
-            //TODO figure this out
             productlist_updateButton.setOnClickListener {
                 val edit = productlist_editProduct.text.toString()
                 adapter.remove(item)
                 adapter.insert(edit, position)
-                //productHandler.updateProduct(item)
-                Log.d("UPDATE()", productHandler.getProducts().toString())
             }
         }
     }
