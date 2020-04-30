@@ -1,4 +1,4 @@
-package edu.boisestate.Project3
+package edu.boisestate.FinalProject
 
 class UserProduct {
 

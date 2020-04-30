@@ -1,4 +1,4 @@
-package edu.boisestate.Project3
+package edu.boisestate.FinalProject
 
 
 import android.content.Intent
@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import edu.boisestate.Project3.R.id.fragmentContainer
+import edu.boisestate.FinalProject.R.id.fragmentContainer
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 /**
@@ -79,7 +79,7 @@ class UserHomeFragment : Fragment() {
             v.homepage_addProductButton.setOnClickListener {
                 val productName: String = v.homepage_productNameEditText.text.toString()
                 val productType: String = v.homepage_productTypeEditText.text.toString()
-                val productBrand: String = v.homepage_productTypeEditText.text.toString()
+                val productBrand: String = v.homepage_productBrandEditText.text.toString()
                 val locationOfPurchase: String = v.homepage_locationOfPurchaseEditExt.text.toString()
                 val storeName: String = v.homepage_storeNameEditText.text.toString()
                 val purchaseDate: String = v.homepage_purchaseDateEditText.text.toString()
@@ -104,7 +104,6 @@ class UserHomeFragment : Fragment() {
             //if view products button is clicked,
             //then take user to their own product list and allow delete and update
             v.homepage_viewUserProductsButton.setOnClickListener {
-
                 val listProductsIntent = Intent(activity, UserProductsList::class.java)
                 activity?.startActivity(listProductsIntent)
             }

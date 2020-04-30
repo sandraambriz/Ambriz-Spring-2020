@@ -1,4 +1,4 @@
-package edu.boisestate.Project3
+package edu.boisestate.FinalProject
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

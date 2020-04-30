@@ -1,4 +1,4 @@
-package edu.boisestate.Project3
+package edu.boisestate.FinalProject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

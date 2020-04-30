@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="edu.boisestate.Project3">
+    package="edu.boisestate.FinalProject">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,11 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="edu.boisestate.Project3.RecommendedJSONConsumeData"></activity>
-        <activity android:name="edu.boisestate.Project3.MakeupAPIConsumeData" />
-        <activity android:name="edu.boisestate.Project3.UserProductsList" />
-        <activity android:name="edu.boisestate.Project3.UserHomepage" />
-        <activity android:name="edu.boisestate.Project3.MainActivity">
+        <activity android:name="edu.boisestate.FinalProject.RecommendedJSONConsumeData"></activity>
+        <activity android:name="edu.boisestate.FinalProject.MakeupAPIConsumeData" />
+        <activity android:name="edu.boisestate.FinalProject.UserProductsList" />
+        <activity android:name="edu.boisestate.FinalProject.UserHomepage" />
+        <activity android:name="edu.boisestate.FinalProject.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
