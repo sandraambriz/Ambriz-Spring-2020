@@ -11,6 +11,6 @@
         android:id="@+id/userHomePage_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="edu.boisestate.FinalProject.UserHomeFragment"/>
+        android:name="edu.boisestate.Project3.UserHomeFragment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

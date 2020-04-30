@@ -1,4 +1,4 @@
-package edu.boisestate.FinalProject
+package edu.boisestate.Project3
 
 import android.view.LayoutInflater
 import android.view.View

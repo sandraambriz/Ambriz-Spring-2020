@@ -1,4 +1,4 @@
-package edu.boisestate.FinalProject
+package edu.boisestate.Project3
 
 
 import android.content.Intent
@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import edu.boisestate.FinalProject.R.id.fragmentContainer
+import edu.boisestate.Project3.R.id.fragmentContainer
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 /**
