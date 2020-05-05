@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/row_productName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Product Name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/row_productType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Product Type"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/row_productBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Product Brand"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/row_storeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Store Name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/row_locationOfPurchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Location of Purchase"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/row_purchaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Purchase Date"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/row_expirationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Expiration Date"
+        android:inputType="date" />
+</LinearLayout>
